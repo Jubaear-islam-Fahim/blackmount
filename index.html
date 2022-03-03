@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackmount</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="blackmount-area">
+        <div class="blackmount-content">
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <div class="heading">
+                <div class="h3 title-t">Installation Guides</div>
+                <p>Select car model and language:</p>
+            </div>
+            <form action="/">
+                <div class="select-box">
+                    <label>CAR MODEL</label>
+                    <select id="Select">
+                        <option value="Select">Select</option>
+                        <option value="1">List Item Number One</option>
+                        <option value="2">List Item Number Two</option>
+                    </select>
+                </div>
+                <div class="select-box">
+                    <label>CAR MODEL</label>
+                    <select id="Select2">
+                        <option value="Select">Select</option>
+                        <option value="1">List Item Number One</option>
+                        <option value="2">List Item Number Two</option>
+                    </select>
+                </div>
+                <div class="submit-btn">
+                    <button type="submit">View Installation Guide</button>
+                </div>
+            </form>
+            
+            <div class="question-content">
+                <div class="h3 title-t">Any Questions?</div>
+                <address>
+                    <p>Please contact our Service Team:</p>
+                    <br>
+                    <b>E-Mail:</b> service@XXXX.com
+                    <br>
+                    <b>Call:</b> +49 (0)123 - 456 789 10
+                    <br>
+                    <b>WhatsApp:</b> +49 (0)123 - 456 789 10
+
+                </address>
+            </div>
+
+            <div class="footer-content">
+                <p>
+                    BLACKMOUNT
+                    <br>  c/o Jon Doe
+                    <br> Jonstreet 123
+                    <br> 12345 Berlin, Germany
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+
+        $('select').each(function () {
+            var $this = $(this), numberOfOptions = $(this).children('option').length;
+
+            $this.addClass('select-hidden');
+            $this.wrap('<div class="select"></div>');
+            $this.after('<div class="select-styled"></div>');
+
+            var $styledSelect = $this.next('div.select-styled');
+            $styledSelect.text($this.children('option').eq(0).text());
+
+            var $list = $('<ul />', {
+                'class': 'select-options'
+            }).insertAfter($styledSelect);
+
+            for (var i = 0; i < numberOfOptions; i++) {
+                $('<li />', {
+                    text: $this.children('option').eq(i).text(),
+                    rel: $this.children('option').eq(i).val()
+                }).appendTo($list);
+            }
+
+            var $listItems = $list.children('li');
+
+            $styledSelect.click(function (e) {
+                e.stopPropagation();
+                $('div.select-styled.active').not(this).each(function () {
+                    $(this).removeClass('active').next('ul.select-options').hide();
+                });
+                $(this).toggleClass('active').next('ul.select-options').toggle();
+            });
+
+            $listItems.click(function (e) {
+                e.stopPropagation();
+                $styledSelect.text($(this).text()).removeClass('active');
+                $this.val($(this).attr('rel'));
+                $list.hide();
+                //console.log($this.val());
+            });
+
+            $(document).click(function () {
+                $styledSelect.removeClass('active');
+                $list.hide();
+            });
+
+        });
+    </script>
+</body>
+
+</html>
