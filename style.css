@@ -172,7 +172,7 @@ form .select-box label {
     background: #eee;
 }
 
-.select-options li[rel="hide"] {
+.select-options li[rel="Select"] {
     display: none;
 }
 
