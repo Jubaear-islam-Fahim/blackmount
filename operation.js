@@ -9,8 +9,7 @@ let langVal = "Select"
 
 
 const onChangeCarName = () => {
-    carVal = carModelSelect.value
-    console.log(carVal)
+    carVal = carModelSelect.value 
 }
 /* carModelSelect.addEventListener('change', () => {
     carVal = carModelSelect.value
