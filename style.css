@@ -167,9 +167,13 @@ form .select-box label {
     padding-top: 30px;
 }
 
-@media (min-width: 320px) and (max-width: 600px) {
+@media (max-width: 600px) {
     .title-t {
         font-size: 38px;
+    }
+
+    .blackmount-content .heading{
+        padding-top: 30px;
     }
 
     .blackmount-content .heading p {
@@ -218,7 +222,7 @@ form .select-box label {
 
 
 
-@media (min-width: 320px) and (max-width: 500px) {
+@media (max-width: 500px) {
     .title-t {
         font-size: 33px;
     }
@@ -256,11 +260,11 @@ form .select-box label {
     }
 
     .question-content {
-        padding: 45px 0;
+        padding: 25px 0;
     }
 
     .footer-content {
-        padding-top: 50px;
+        padding-top: 35px;
     }
 
     .blackmount-content {
@@ -296,7 +300,7 @@ form .select-box label {
     }
 }
 
-@media (min-width: 320px) and (max-width: 400px) {
+@media (max-width: 400px) {
     .logo {
         padding: 0 3px; 
     }
