@@ -186,7 +186,7 @@ form .select-box label {
     }
 
     .logo {
-        padding: 0 3px;
+        padding: 0 15px;
         text-align: center;
     }
 
@@ -212,6 +212,7 @@ form .select-box label {
     }
 
 }
+
 
 
 @media (min-width: 320px) and (max-width: 500px) {
@@ -243,7 +244,7 @@ form .select-box label {
 
     .blackmount-content form {
         max-width: 250px;
-        gap: 15px;
+        gap: 25px;
         padding: 43px 0;
     }
 
@@ -286,5 +287,14 @@ form .select-box label {
     }
     .blackmount-content form {
         max-width: 230px; 
+    }
+    .logo {
+        padding: 0 28px; 
+    }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+    .logo {
+        padding: 0 3px; 
     }
 }
