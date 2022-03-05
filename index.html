@@ -23,23 +23,23 @@
                 <div class="h3 title-t">Installation Guides</div>
                 <p>Select car model and language:</p>
             </div>
-            <form id="form" action="/"> 
+            <form id="form" action="/">
                 <div class="box select-box">
                     <label>CAR MODEL</label>
-                    <select class="wide" id="Select">
+                    <select onchange="onChangeCarName()" id="Select" class="wide">
                         <option data-display="Select"></option>
-                        <option value="1">VW Golf 8</option> 
-                        <option value="2">Tesla Model 3 / Y</option>  
+                        <option>VW Golf 8</option>
+                        <option>Tesla Model 3 / Y</option>
                     </select>
                 </div>
                 <div class="box select-box">
                     <label>LANGUAGE</label>
-                    <select class="wide" id="Select2">
+                    <select onchange="onChangeLanguage()" id="Select2" class="wide">
                         <option data-display="Select"></option>
-                        <option value="1">Italiano</option> 
-                        <option value="2">Deutsch</option> 
+                        <option>Italiano</option>
+                        <option>Deutsch</option>
                     </select>
-                </div> 
+                </div>
                 <div class="submit-btn">
                     <button type="submit">View Installation Guide</button>
                 </div>
@@ -70,12 +70,11 @@
         </div>
     </div>
 
-    
 
 
+    <script src="operation.js"></script>
     <script src="nice-select/jquery.js"></script>
     <script src="nice-select/jquery.nice-select.min.js"></script>
-    <script src="operation.js"></script>
     <script>
         $(document).ready(function () {
             $('select:not(.ignore)').niceSelect();
