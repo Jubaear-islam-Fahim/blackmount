@@ -23,23 +23,23 @@
                 <div class="h3 title-t">Installation Guides</div>
                 <p>Select car model and language:</p>
             </div>
-            <form id="form" action="/"> 
+            <form id="form" action="/">
                 <div class="box select-box">
                     <label>CAR MODEL</label>
-                    <select class="wide">
+                    <select onchange="myFuncth()" class="wide">
                         <option data-display="Select"></option>
-                        <option value="1">VW Golf 8</option> 
-                        <option value="2">Tesla Model 3 / Y</option>  
+                        <option value="1">VW Golf 8</option>
+                        <option value="2">Tesla Model 3 / Y</option>
                     </select>
                 </div>
                 <div class="box select-box">
                     <label>LANGUAGE</label>
                     <select class="wide">
                         <option data-display="Select"></option>
-                        <option value="1">Italiano</option> 
-                        <option value="2">Deutsch</option> 
+                        <option value="1">Italiano</option>
+                        <option value="2">Deutsch</option>
                     </select>
-                </div> 
+                </div>
                 <div class="submit-btn">
                     <button type="submit">View Installation Guide</button>
                 </div>
@@ -70,9 +70,13 @@
         </div>
     </div>
 
-    
 
 
+    <script>
+        const myFuncth = () => {
+            console.log('changing')
+        }
+    </script>
     <script src="nice-select/jquery.js"></script>
     <script src="nice-select/jquery.nice-select.min.js"></script>
     <script src="operation.js"></script>
