@@ -7,14 +7,24 @@ const form = document.getElementById('form')
 let carVal = "Select"
 let langVal = "Select"
 
-carModelSelect.addEventListener('change', () => {
-    carVal = carModelSelect.value
-})
 
-language.addEventListener('change', () => {
+const onChangeCarName = () => {
+    carVal = carModelSelect.value
+    console.log(carVal)
+}
+/* carModelSelect.addEventListener('change', () => {
+    carVal = carModelSelect.value
+}) */
+
+
+const onChangeLanguage = () => {
+    langVal = language.value
+}
+
+/* language.addEventListener('change', () => {
     langVal = language.value
 })
-
+ */
 // Handling form submission
 form.addEventListener('submit', (event) => {
     event.preventDefault()

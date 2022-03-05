@@ -26,18 +26,18 @@
             <form id="form" action="/">
                 <div class="box select-box">
                     <label>CAR MODEL</label>
-                    <select onchange="myFuncth()" class="wide">
+                    <select onchange="onChangeCarName()" id="Select" class="wide">
                         <option data-display="Select"></option>
-                        <option value="1">VW Golf 8</option>
-                        <option value="2">Tesla Model 3 / Y</option>
+                        <option>VW Golf 8</option>
+                        <option>Tesla Model 3 / Y</option>
                     </select>
                 </div>
                 <div class="box select-box">
                     <label>LANGUAGE</label>
-                    <select class="wide">
+                    <select onchange="onChangeLanguage()" id="Select2" class="wide">
                         <option data-display="Select"></option>
-                        <option value="1">Italiano</option>
-                        <option value="2">Deutsch</option>
+                        <option>Italiano</option>
+                        <option>Deutsch</option>
                     </select>
                 </div>
                 <div class="submit-btn">
@@ -72,14 +72,9 @@
 
 
 
-    <script>
-        const myFuncth = () => {
-            console.log('changing')
-        }
-    </script>
+    <script src="operation.js"></script>
     <script src="nice-select/jquery.js"></script>
     <script src="nice-select/jquery.nice-select.min.js"></script>
-    <script src="operation.js"></script>
     <script>
         $(document).ready(function () {
             $('select:not(.ignore)').niceSelect();
